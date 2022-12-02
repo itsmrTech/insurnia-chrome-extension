@@ -105,8 +105,8 @@ const genInsuranceButton = (props) => {
         <div class="insurnia-button">
             <img src="${chrome.runtime.getURL("images/alteos.png")}" /> 
             <div class="insurnia-button-details">
-                <span class="insurnia-button-title">${currencies[String(props.cost.currency).toUpperCase()].symbol}${props.cost.amount}</span>
-                <span class="insurnia-button-subtitle">${props.months} months guarantee</span>
+                <span class="insurnia-button-title">${props.months*2} months</span>
+                <span class="insurnia-button-subtitle"> guarantee - ${currencies[String(props.cost.currency).toUpperCase()].symbol}${props.cost.amount}</span>
             </div>
         </div>
     </a>
