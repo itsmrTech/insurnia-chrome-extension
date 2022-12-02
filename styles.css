@@ -1,0 +1,72 @@
+.insurnia-button {
+    width: fit-content;
+    height: 35px;
+    background-color: rgb(246, 246, 246);
+    border-radius: 5px;
+    border: 1px;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.insurnia-button-details {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    line-height: 1.6ch;
+    white-space: nowrap;
+}
+
+.insurnia-button>img {
+    height: 100%;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.insurnia-button-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.insurnia-button-subtitle {
+    font-size: 9px;
+    font-weight: lighter;
+    color: rgb(107, 107, 107)
+}
+
+.insurnia-button.insurnia-disabled {
+
+    background-color: rgba(246, 246, 246, 0.2);
+    color: rgb(211, 209, 209);
+}
+
+.insurnia-button.insurnia-disabled .insurnia-button-subtitle {
+    color: rgb(211, 209, 209);
+
+}
+
+.insurnia-button.insurnia-disabled img {
+    filter: grayscale(80%);
+}
+
+.insurnia-button.insurnia-loading img {
+
+
+    animation-name: spinner;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.76,.05,.33,.95);
+
+}
+
+@keyframes spinner {
+    from {
+        transform:rotate(0deg);
+    }
+
+    to {
+        transform: rotate(720deg);
+    }
+}

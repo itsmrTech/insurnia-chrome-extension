@@ -1,0 +1,38 @@
+{
+  "name": "Insurnia",
+  "description": "Get the best insurance package by a click.",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "icons": {
+    "16": "images/logo-16.png",
+    "32": "images/logo-32.png",
+    "48": "images/logo-48.png",
+    "128": "images/logo-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*/cart/view.html*"],
+      "js": ["jquery-3.6.1.min.js", "amazon-script.js"],
+      "css": ["styles.css"]
+    },
+    {
+      "matches": ["https://shop.alteos.com/garantie/quote*"],
+      "js": ["alteos-script.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "currencies.json",
+        "images/alteos.png",
+        "images/logo-128.png",
+        "images/loading.png"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": ["storage"]
+}
